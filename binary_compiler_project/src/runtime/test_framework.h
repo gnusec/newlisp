@@ -171,6 +171,12 @@ bool test_run_all(void);
 const TestStats* test_get_stats(void);
 
 /**
+ * @brief 释放测试套件 / Free test suite
+ * @param suite 测试套件 / Test suite
+ */
+void test_free_suite(TestSuite* suite);
+
+/**
  * @brief 打印测试报告 / Print test report
  * @param output 输出流 / Output stream
  */
@@ -314,6 +320,8 @@ void test_set_timeout(TestSuite* suite, const char* test_name, double timeout);
  * @param enabled 是否启用 / Whether enabled
  */
 void test_set_enabled(TestSuite* suite, const char* test_name, bool enabled);
+
+
 
 #ifdef __cplusplus
 }

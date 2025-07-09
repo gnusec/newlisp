@@ -8,6 +8,7 @@
  * MVP version: Use system call approach to integrate TinyCC, avoid complex API dependencies
  */
 
+#define _GNU_SOURCE
 #include "tinycc_wrapper.h"
 #include <stdio.h>
 #include <stdlib.h>

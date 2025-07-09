@@ -15,6 +15,7 @@
 #include <string.h>
 #include <errno.h>
 #include <math.h>
+#include "../runtime/string_utils.h"
 
 // 内置函数映射表 / Built-in function mapping table
 static const char* builtin_functions[] = {
@@ -171,13 +172,13 @@ int parser_get_error_count(const Parser* parser) {
  */
 Lexer* lexer_create(const char* input) {
     if (!input) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Input cannot be NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Input cannot be NULL%s", "");
         return NULL;
     }
     
     Lexer* lexer = (Lexer*)memory_alloc(sizeof(Lexer), MEM_TYPE_AST);
     if (!lexer) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate lexer");
+        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate lexer%s", "");
         return NULL;
     }
     
@@ -267,7 +268,7 @@ char* lexer_read_string(Lexer* lexer) {
         if (lexer->current_char == '\\') {
             lexer_advance(lexer); // 跳过转义字符 / Skip escape character
             if (lexer->current_char == '\0') {
-                ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Unterminated string escape");
+                ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Unterminated string escape%s", "");
                 return NULL;
             }
         }
@@ -276,14 +277,14 @@ char* lexer_read_string(Lexer* lexer) {
     }
     
     if (lexer->current_char != '"') {
-        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Unterminated string literal");
+        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Unterminated string literal%s", "");
         return NULL;
     }
     
     // 分配内存并复制字符串 / Allocate memory and copy string
     char* result = (char*)memory_alloc(length + 1, MEM_TYPE_STRING);
     if (!result) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate string");
+        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate string%s", "");
         return NULL;
     }
     
@@ -376,13 +377,13 @@ char* lexer_read_symbol(Lexer* lexer) {
     
     size_t length = lexer->position - start_pos;
     if (length == 0) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Empty symbol");
+        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Empty symbol%s", "");
         return NULL;
     }
     
     char* result = (char*)memory_alloc(length + 1, MEM_TYPE_STRING);
     if (!result) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate symbol");
+        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate symbol%s", "");
         return NULL;
     }
     
@@ -495,13 +496,13 @@ Token lexer_next_token(Lexer* lexer) {
  */
 Parser* parser_create(const char* input) {
     if (!input) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Input cannot be NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Input cannot be NULL%s", "");
         return NULL;
     }
 
     Parser* parser = (Parser*)memory_alloc(sizeof(Parser), MEM_TYPE_AST);
     if (!parser) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate parser");
+        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate parser%s", "");
         return NULL;
     }
 
@@ -629,8 +630,337 @@ static ASTNode* parser_parse_list(Parser* parser) {
         return NULL;
     }
 
-    // 检查是否为函数调用 / Check if function call
+    // 检查是否为特殊形式或函数调用 / Check if special form or function call
     if (first->type == AST_NODE_SYMBOL) {
+        const char* symbol_name = first->data.symbol.name;
+
+        // 检查特殊形式 / Check special forms
+        if (strcmp(symbol_name, "if") == 0) {
+            // 解析if语句: (if condition then-expr [else-expr])
+            ASTNode* condition = parser_parse_expression(parser);
+            if (!condition) {
+                ast_destroy_node(first);
+                return NULL;
+            }
+
+            ASTNode* then_branch = parser_parse_expression(parser);
+            if (!then_branch) {
+                ast_destroy_node(first);
+                ast_destroy_node(condition);
+                return NULL;
+            }
+
+            ASTNode* else_branch = NULL;
+            if (!parser_check(parser, TOKEN_RPAREN)) {
+                else_branch = parser_parse_expression(parser);
+                if (!else_branch) {
+                    ast_destroy_node(first);
+                    ast_destroy_node(condition);
+                    ast_destroy_node(then_branch);
+                    return NULL;
+                }
+            }
+
+            if (!parser_match(parser, TOKEN_RPAREN)) {
+                ast_destroy_node(first);
+                ast_destroy_node(condition);
+                ast_destroy_node(then_branch);
+                if (else_branch) ast_destroy_node(else_branch);
+                parser_error(parser, "Expected ')' after if expression");
+                return NULL;
+            }
+
+            ast_destroy_node(first); // 不再需要symbol节点
+            return ast_create_if(condition, then_branch, else_branch);
+        }
+
+        if (strcmp(symbol_name, "while") == 0) {
+            // 解析while循环: (while condition body)
+            ASTNode* condition = parser_parse_expression(parser);
+            if (!condition) {
+                ast_destroy_node(first);
+                return NULL;
+            }
+
+            ASTNode* body = parser_parse_expression(parser);
+            if (!body) {
+                ast_destroy_node(first);
+                ast_destroy_node(condition);
+                return NULL;
+            }
+
+            if (!parser_match(parser, TOKEN_RPAREN)) {
+                ast_destroy_node(first);
+                ast_destroy_node(condition);
+                ast_destroy_node(body);
+                parser_error(parser, "Expected ')' after while expression");
+                return NULL;
+            }
+
+            ast_destroy_node(first); // 不再需要symbol节点
+            return ast_create_while(condition, body);
+        }
+
+        if (strcmp(symbol_name, "when") == 0) {
+            // 解析when语句: (when condition body) - 等价于 (if condition body)
+            ASTNode* condition = parser_parse_expression(parser);
+            if (!condition) {
+                ast_destroy_node(first);
+                return NULL;
+            }
+
+            ASTNode* body = parser_parse_expression(parser);
+            if (!body) {
+                ast_destroy_node(first);
+                ast_destroy_node(condition);
+                return NULL;
+            }
+
+            if (!parser_match(parser, TOKEN_RPAREN)) {
+                ast_destroy_node(first);
+                ast_destroy_node(condition);
+                ast_destroy_node(body);
+                parser_error(parser, "Expected ')' after when expression");
+                return NULL;
+            }
+
+            ast_destroy_node(first); // 不再需要symbol节点
+            return ast_create_if(condition, body, NULL); // when等价于没有else的if
+        }
+
+        if (strcmp(symbol_name, "unless") == 0) {
+            // 解析unless语句: (unless condition body) - 等价于 (if (not condition) body)
+            ASTNode* condition = parser_parse_expression(parser);
+            if (!condition) {
+                ast_destroy_node(first);
+                return NULL;
+            }
+
+            ASTNode* body = parser_parse_expression(parser);
+            if (!body) {
+                ast_destroy_node(first);
+                ast_destroy_node(condition);
+                return NULL;
+            }
+
+            if (!parser_match(parser, TOKEN_RPAREN)) {
+                ast_destroy_node(first);
+                ast_destroy_node(condition);
+                ast_destroy_node(body);
+                parser_error(parser, "Expected ')' after unless expression");
+                return NULL;
+            }
+
+            // 创建not条件: (not condition)
+            ASTNode* not_condition = ast_create_unary_op(UNARY_OP_NOT, condition);
+            if (!not_condition) {
+                ast_destroy_node(first);
+                ast_destroy_node(condition);
+                ast_destroy_node(body);
+                return NULL;
+            }
+
+            ast_destroy_node(first); // 不再需要symbol节点
+            return ast_create_if(not_condition, body, NULL); // unless等价于if not
+        }
+
+        if (strcmp(symbol_name, "set") == 0) {
+            // 解析set语句: (set variable-name value)
+            ASTNode* var_name = parser_parse_expression(parser);
+            if (!var_name) {
+                ast_destroy_node(first);
+                return NULL;
+            }
+
+            // 变量名必须是符号
+            if (var_name->type != AST_NODE_SYMBOL) {
+                ast_destroy_node(first);
+                ast_destroy_node(var_name);
+                parser_error(parser, "Variable name must be a symbol");
+                return NULL;
+            }
+
+            ASTNode* value = parser_parse_expression(parser);
+            if (!value) {
+                ast_destroy_node(first);
+                ast_destroy_node(var_name);
+                return NULL;
+            }
+
+            if (!parser_match(parser, TOKEN_RPAREN)) {
+                ast_destroy_node(first);
+                ast_destroy_node(var_name);
+                ast_destroy_node(value);
+                parser_error(parser, "Expected ')' after set expression");
+                return NULL;
+            }
+
+            // 创建变量定义节点
+            const char* name = var_name->data.symbol.name;
+            ASTNode* var_def = ast_create_variable_def(name, value);
+
+            ast_destroy_node(first); // 不再需要symbol节点
+            ast_destroy_node(var_name); // 不再需要变量名节点
+
+            return var_def;
+        }
+
+        if (strcmp(symbol_name, "define") == 0) {
+            // 解析define语句: (define (function-name param1 param2 ...) body)
+            // 或者: (define function-name value) 用于变量定义
+
+            // 检查下一个token是否为左括号（函数定义）
+            if (parser_check(parser, TOKEN_LPAREN)) {
+                // 函数定义: (define (function-name param1 param2 ...) body)
+                parser_advance(parser); // 消费 '('
+
+                // 解析函数名
+                if (!parser_check(parser, TOKEN_SYMBOL)) {
+                    ast_destroy_node(first);
+                    parser_error(parser, "Expected function name");
+                    return NULL;
+                }
+
+                char* func_name = safe_strdup(parser->current_token.value);
+                if (!func_name) {
+                    ast_destroy_node(first);
+                    parser_error(parser, "Failed to allocate function name");
+                    return NULL;
+                }
+                parser_advance(parser);
+
+                // 解析参数列表
+                size_t param_count = 0;
+                char** parameters = NULL;
+
+                while (!parser_check(parser, TOKEN_RPAREN) && !parser_check(parser, TOKEN_EOF)) {
+                    if (!parser_check(parser, TOKEN_SYMBOL)) {
+                        ast_destroy_node(first);
+                        memory_free(func_name);
+                        if (parameters) {
+                            for (size_t i = 0; i < param_count; i++) {
+                                memory_free(parameters[i]);
+                            }
+                            memory_free(parameters);
+                        }
+                        parser_error(parser, "Function parameters must be symbols");
+                        return NULL;
+                    }
+
+                    // 扩展参数数组
+                    char** new_params = (char**)memory_alloc(sizeof(char*) * (param_count + 1), MEM_TYPE_TEMP);
+                    if (!new_params) {
+                        ast_destroy_node(first);
+                        memory_free(func_name);
+                        if (parameters) {
+                            for (size_t i = 0; i < param_count; i++) {
+                                memory_free(parameters[i]);
+                            }
+                            memory_free(parameters);
+                        }
+                        return NULL;
+                    }
+
+                    for (size_t i = 0; i < param_count; i++) {
+                        new_params[i] = parameters[i];
+                    }
+                    if (parameters) memory_free(parameters);
+                    parameters = new_params;
+
+                    parameters[param_count] = safe_strdup(parser->current_token.value);
+                    param_count++;
+                    parser_advance(parser);
+                }
+
+                if (!parser_match(parser, TOKEN_RPAREN)) {
+                    ast_destroy_node(first);
+                    memory_free(func_name);
+                    if (parameters) {
+                        for (size_t i = 0; i < param_count; i++) {
+                            memory_free(parameters[i]);
+                        }
+                        memory_free(parameters);
+                    }
+                    parser_error(parser, "Expected ')' after parameter list");
+                    return NULL;
+                }
+
+                // 解析函数体
+                ASTNode* body = parser_parse_expression(parser);
+                if (!body) {
+                    ast_destroy_node(first);
+                    memory_free(func_name);
+                    if (parameters) {
+                        for (size_t i = 0; i < param_count; i++) {
+                            memory_free(parameters[i]);
+                        }
+                        memory_free(parameters);
+                    }
+                    return NULL;
+                }
+
+                if (!parser_match(parser, TOKEN_RPAREN)) {
+                    ast_destroy_node(first);
+                    ast_destroy_node(body);
+                    memory_free(func_name);
+                    if (parameters) {
+                        for (size_t i = 0; i < param_count; i++) {
+                            memory_free(parameters[i]);
+                        }
+                        memory_free(parameters);
+                    }
+                    parser_error(parser, "Expected ')' after function definition");
+                    return NULL;
+                }
+
+                // 创建函数定义节点
+                ASTNode* func_def = ast_create_function_def(func_name, parameters, param_count, body);
+
+                ast_destroy_node(first);
+                memory_free(func_name);
+
+                return func_def;
+            } else {
+                // 变量定义: (define variable-name value)
+                ASTNode* first_arg = parser_parse_expression(parser);
+                if (!first_arg) {
+                    ast_destroy_node(first);
+                    return NULL;
+                }
+
+                if (first_arg->type != AST_NODE_SYMBOL) {
+                    ast_destroy_node(first);
+                    ast_destroy_node(first_arg);
+                    parser_error(parser, "Variable name must be a symbol");
+                    return NULL;
+                }
+
+                ASTNode* value = parser_parse_expression(parser);
+                if (!value) {
+                    ast_destroy_node(first);
+                    ast_destroy_node(first_arg);
+                    return NULL;
+                }
+
+                if (!parser_match(parser, TOKEN_RPAREN)) {
+                    ast_destroy_node(first);
+                    ast_destroy_node(first_arg);
+                    ast_destroy_node(value);
+                    parser_error(parser, "Expected ')' after variable definition");
+                    return NULL;
+                }
+
+                // 创建变量定义节点
+                const char* var_name = first_arg->data.symbol.name;
+                ASTNode* var_def = ast_create_variable_def(var_name, value);
+
+                ast_destroy_node(first);
+                ast_destroy_node(first_arg);
+
+                return var_def;
+            }
+        }
+
         // 解析函数参数 / Parse function arguments
         ASTNode** arguments = NULL;
         size_t arg_count = 0;
@@ -892,7 +1222,7 @@ ASTNode* parse_string(const char* input) {
  */
 ASTNode* parse_file(const char* filename) {
     if (!filename) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Filename cannot be NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Filename cannot be NULL%s", "");
         return NULL;
     }
 
@@ -917,7 +1247,7 @@ ASTNode* parse_file(const char* filename) {
     char* buffer = (char*)memory_alloc(file_size + 1, MEM_TYPE_TEMP);
     if (!buffer) {
         fclose(file);
-        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate file buffer");
+        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate file buffer%s", "");
         return NULL;
     }
 

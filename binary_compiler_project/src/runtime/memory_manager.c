@@ -135,12 +135,12 @@ void memory_manager_cleanup(void) {
 void* memory_alloc_debug(size_t size, MemoryType type, 
                         const char* file, int line, const char* function) {
     if (g_memory_manager == NULL || !g_memory_manager->initialized) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Memory manager not initialized");
+        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Memory manager not initialized%s", "");
         return malloc(size); // 回退到标准malloc / Fallback to standard malloc
     }
     
     if (size == 0) {
-        ERROR_REPORT_WARNING(ERROR_TYPE_MEMORY, -1, "Attempting to allocate 0 bytes");
+        ERROR_REPORT_WARNING(ERROR_TYPE_MEMORY, -1, "Attempting to allocate 0 bytes%s", "");
         return NULL;
     }
     

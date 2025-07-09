@@ -33,6 +33,7 @@ typedef enum {
     MEM_TYPE_TEMP,            // 临时内存 / Temporary memory
     MEM_TYPE_CACHE,           // 缓存 / Cache
     MEM_TYPE_DEBUG,           // 调试信息 / Debug info
+    MEM_TYPE_TEST,            // 测试内存 / Test memory
     MEM_TYPE_COUNT            // 类型数量 / Type count
 } MemoryType;
 

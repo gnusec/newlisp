@@ -1,0 +1,5 @@
+(set x 10)
+(set y 20)
+(set sum (+ x y))
+(println sum)
+(if (> sum 25) (println "Sum is greater than 25"))

@@ -204,6 +204,14 @@ bool symboltable_add(SymbolTable* table, const char* name, DataType type, const 
 SymbolEntry* symboltable_find(SymbolTable* table, const char* name);
 
 /**
+ * @brief 生成C函数名 / Generate C function name
+ * @param codegen 代码生成器 / Code generator
+ * @param base_name 基础名称 / Base name
+ * @return C函数名 / C function name
+ */
+char* codegen_generate_c_function_name(CodeGenerator* codegen, const char* base_name);
+
+/**
  * @brief 生成唯一C变量名 / Generate unique C variable name
  * @param codegen 代码生成器 / Code generator
  * @param base_name 基础名称 / Base name
@@ -261,6 +269,14 @@ char* codegen_generate_arithmetic(CodeGenerator* codegen, BinaryOpType op,
  * @return 成功返回true / Returns true on success
  */
 bool codegen_generate_headers(CodeGenerator* codegen);
+
+/**
+ * @brief 生成用户自定义函数 / Generate user-defined functions
+ * @param codegen 代码生成器 / Code generator
+ * @param program_ast 程序AST / Program AST
+ * @return 成功返回true / Returns true on success
+ */
+bool codegen_generate_user_functions(CodeGenerator* codegen, ASTNode* program_ast);
 
 /**
  * @brief 生成main函数 / Generate main function
@@ -322,6 +338,16 @@ void codegen_error(CodeGenerator* codegen, const char* message);
  * @return 有错误返回true / Returns true if has errors
  */
 bool codegen_has_errors(const CodeGenerator* codegen);
+
+/**
+ * @brief 生成max/min函数代码 / Generate max/min function code
+ * @param codegen 代码生成器 / Code generator
+ * @param args 参数数组 / Arguments array
+ * @param arg_count 参数数量 / Argument count
+ * @param is_max 是否为max函数 / Whether it's max function
+ * @return 生成的代码字符串 / Generated code string
+ */
+char* codegen_generate_max_min(CodeGenerator* codegen, ASTNode** args, size_t arg_count, bool is_max);
 
 #ifdef __cplusplus
 }

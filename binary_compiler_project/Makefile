@@ -51,6 +51,8 @@ TEST_RUNNER = $(BUILD_DIR)/test_runner
 .PHONY: all
 all: directories $(RUNTIME_LIBRARY) $(NLCC_EXECUTABLE)
 
+
+
 # MVP快速构建 / MVP Quick Build
 .PHONY: mvp
 mvp: directories $(RUNTIME_LIBRARY) $(AST_OBJECTS) $(TINYCC_OBJECTS)

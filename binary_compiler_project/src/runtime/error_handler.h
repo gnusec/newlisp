@@ -17,6 +17,20 @@
 #include <stdarg.h>
 #include <stdbool.h>
 
+// ISO C99兼容性宏 / ISO C99 compatibility macro
+#ifdef __STDC_VERSION__
+    #if __STDC_VERSION__ >= 199901L
+        // C99或更新版本，使用__func__
+        #define FUNCTION_NAME __func__
+    #else
+        // 旧版本C，使用字符串字面量
+        #define FUNCTION_NAME "unknown"
+    #endif
+#else
+    // 未定义标准版本，使用保守方案
+    #define FUNCTION_NAME "unknown"
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -195,23 +209,23 @@ const char* error_type_to_string(ErrorType type);
 // 便利宏定义 / Convenience Macros
 
 #define ERROR_REPORT_DEBUG(type, code, format, ...) \
-    error_report(ERROR_LEVEL_DEBUG, type, code, __FILE__, __LINE__, __FUNCTION__, format, ##__VA_ARGS__)
+    error_report(ERROR_LEVEL_DEBUG, type, code, __FILE__, __LINE__, FUNCTION_NAME, format, ##__VA_ARGS__)
 
 #define ERROR_REPORT_INFO(type, code, format, ...) \
-    error_report(ERROR_LEVEL_INFO, type, code, __FILE__, __LINE__, __FUNCTION__, format, ##__VA_ARGS__)
+    error_report(ERROR_LEVEL_INFO, type, code, __FILE__, __LINE__, FUNCTION_NAME, format, ##__VA_ARGS__)
 
 #define ERROR_REPORT_WARNING(type, code, format, ...) \
-    error_report(ERROR_LEVEL_WARNING, type, code, __FILE__, __LINE__, __FUNCTION__, format, ##__VA_ARGS__)
+    error_report(ERROR_LEVEL_WARNING, type, code, __FILE__, __LINE__, FUNCTION_NAME, format, ##__VA_ARGS__)
 
 #define ERROR_REPORT_ERROR(type, code, format, ...) \
-    error_report(ERROR_LEVEL_ERROR, type, code, __FILE__, __LINE__, __FUNCTION__, format, ##__VA_ARGS__)
+    error_report(ERROR_LEVEL_ERROR, type, code, __FILE__, __LINE__, FUNCTION_NAME, format, ##__VA_ARGS__)
 
 #define ERROR_REPORT_FATAL(type, code, format, ...) \
-    error_report(ERROR_LEVEL_FATAL, type, code, __FILE__, __LINE__, __FUNCTION__, format, ##__VA_ARGS__)
+    error_report(ERROR_LEVEL_FATAL, type, code, __FILE__, __LINE__, FUNCTION_NAME, format, ##__VA_ARGS__)
 
 // 带上下文的便利宏 / Convenience macros with context
 #define ERROR_REPORT_WITH_CONTEXT(level, type, code, context, format, ...) \
-    error_report_with_context(level, type, code, __FILE__, __LINE__, __FUNCTION__, context, format, ##__VA_ARGS__)
+    error_report_with_context(level, type, code, __FILE__, __LINE__, FUNCTION_NAME, context, format, ##__VA_ARGS__)
 
 // 条件错误报告宏 / Conditional error reporting macros
 #define ERROR_CHECK_NULL(ptr, type, code, format, ...) \

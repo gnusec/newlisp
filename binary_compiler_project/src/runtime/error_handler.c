@@ -140,7 +140,7 @@ int error_register_handler(ErrorCallback callback, void* user_data, ErrorLevel m
     }
     
     if (callback == NULL) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_SYSTEM, -1, "Callback function is NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_SYSTEM, -1, "Callback function is NULL%s", "");
         return -1;
     }
     

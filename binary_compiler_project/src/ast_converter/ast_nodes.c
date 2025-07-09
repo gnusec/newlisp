@@ -53,7 +53,7 @@ ASTNode* ast_create_node(ASTNodeType type) {
     
     ASTNode* node = (ASTNode*)memory_alloc(sizeof(ASTNode), MEM_TYPE_AST);
     if (!node) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate AST node");
+        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate AST node%s", "");
         return NULL;
     }
     
@@ -188,7 +188,7 @@ ASTNode* ast_create_float(double value) {
  */
 ASTNode* ast_create_string(const char* value) {
     if (!value) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "String value cannot be NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "String value cannot be NULL%s", "");
         return NULL;
     }
     
@@ -210,7 +210,7 @@ ASTNode* ast_create_string(const char* value) {
  */
 ASTNode* ast_create_symbol(const char* name) {
     if (!name) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Symbol name cannot be NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Symbol name cannot be NULL%s", "");
         return NULL;
     }
     
@@ -258,7 +258,7 @@ ASTNode* ast_create_list(void) {
  */
 bool ast_list_add_element(ASTNode* list, ASTNode* element) {
     if (!list || list->type != AST_NODE_LIST || !element) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Invalid list or element");
+        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Invalid list or element%s", "");
         return false;
     }
     
@@ -272,7 +272,7 @@ bool ast_list_add_element(ASTNode* list, ASTNode* element) {
         );
         
         if (!new_elements) {
-            ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to expand list capacity");
+            ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to expand list capacity%s", "");
             return false;
         }
         

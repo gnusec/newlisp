@@ -71,6 +71,7 @@ typedef enum {
 typedef enum {
     UNARY_OP_NEG = 0,         // 负号 / Negation
     UNARY_OP_NOT,             // 逻辑非 / Logical NOT
+    UNARY_OP_ABS,             // 绝对值 / Absolute value
     UNARY_OP_COUNT
 } UnaryOpType;
 

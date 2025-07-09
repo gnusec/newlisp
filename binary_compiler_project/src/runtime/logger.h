@@ -16,7 +16,21 @@
 #include <string.h>
 #include <stdarg.h>
 #include <stdbool.h>
+#include <stdint.h>
 #include <time.h>
+
+// ISO C99兼容性宏 / ISO C99 compatibility macro
+#ifndef FUNCTION_NAME
+#ifdef __STDC_VERSION__
+    #if __STDC_VERSION__ >= 199901L
+        #define FUNCTION_NAME __func__
+    #else
+        #define FUNCTION_NAME "unknown"
+    #endif
+#else
+    #define FUNCTION_NAME "unknown"
+#endif
+#endif
 
 #ifdef __cplusplus
 extern "C" {
@@ -163,6 +177,31 @@ void logger_set_target(LogTarget target, bool enable);
 bool logger_set_file(const char* file_path);
 
 /**
+ * @brief 检查日志级别是否启用 / Check if log level is enabled
+ * @param level 日志级别 / Log level
+ * @return 启用返回true / Returns true if enabled
+ */
+bool logger_is_level_enabled(LogLevel level);
+
+/**
+ * @brief 检查控制台日志是否启用 / Check if console logging is enabled
+ * @return 启用返回true / Returns true if enabled
+ */
+bool logger_is_console_enabled(void);
+
+/**
+ * @brief 检查文件日志是否启用 / Check if file logging is enabled
+ * @return 启用返回true / Returns true if enabled
+ */
+bool logger_is_file_enabled(void);
+
+/**
+ * @brief 获取日志运行时间 / Get logger uptime
+ * @return 运行时间(毫秒) / Uptime in milliseconds
+ */
+uint64_t logger_get_uptime_ms(void);
+
+/**
  * @brief 刷新日志缓冲区 / Flush log buffers
  */
 void logger_flush(void);
@@ -199,26 +238,26 @@ int logger_format_timestamp(double timestamp, char* buffer, size_t buffer_size);
 // 便利宏定义 / Convenience Macros
 
 #define LOG_TRACE(category, format, ...) \
-    logger_log(LOG_LEVEL_TRACE, __FILE__, __LINE__, __FUNCTION__, category, format, ##__VA_ARGS__)
+    logger_log(LOG_LEVEL_TRACE, __FILE__, __LINE__, FUNCTION_NAME, category, format, ##__VA_ARGS__)
 
 #define LOG_DEBUG(category, format, ...) \
-    logger_log(LOG_LEVEL_DEBUG, __FILE__, __LINE__, __FUNCTION__, category, format, ##__VA_ARGS__)
+    logger_log(LOG_LEVEL_DEBUG, __FILE__, __LINE__, FUNCTION_NAME, category, format, ##__VA_ARGS__)
 
 #define LOG_INFO(category, format, ...) \
-    logger_log(LOG_LEVEL_INFO, __FILE__, __LINE__, __FUNCTION__, category, format, ##__VA_ARGS__)
+    logger_log(LOG_LEVEL_INFO, __FILE__, __LINE__, FUNCTION_NAME, category, format, ##__VA_ARGS__)
 
 #define LOG_WARNING(category, format, ...) \
-    logger_log(LOG_LEVEL_WARNING, __FILE__, __LINE__, __FUNCTION__, category, format, ##__VA_ARGS__)
+    logger_log(LOG_LEVEL_WARNING, __FILE__, __LINE__, FUNCTION_NAME, category, format, ##__VA_ARGS__)
 
 #define LOG_ERROR(category, format, ...) \
-    logger_log(LOG_LEVEL_ERROR, __FILE__, __LINE__, __FUNCTION__, category, format, ##__VA_ARGS__)
+    logger_log(LOG_LEVEL_ERROR, __FILE__, __LINE__, FUNCTION_NAME, category, format, ##__VA_ARGS__)
 
 #define LOG_FATAL(category, format, ...) \
-    logger_log(LOG_LEVEL_FATAL, __FILE__, __LINE__, __FUNCTION__, category, format, ##__VA_ARGS__)
+    logger_log(LOG_LEVEL_FATAL, __FILE__, __LINE__, FUNCTION_NAME, category, format, ##__VA_ARGS__)
 
 // 带上下文的日志宏 / Log macros with context
 #define LOG_WITH_CONTEXT(level, category, context, format, ...) \
-    logger_log_with_context(level, __FILE__, __LINE__, __FUNCTION__, category, context, format, ##__VA_ARGS__)
+    logger_log_with_context(level, __FILE__, __LINE__, FUNCTION_NAME, category, context, format, ##__VA_ARGS__)
 
 // 分类日志宏 / Category-specific log macros
 #define LOG_COMPILER_TRACE(format, ...)   LOG_TRACE("COMPILER", format, ##__VA_ARGS__)

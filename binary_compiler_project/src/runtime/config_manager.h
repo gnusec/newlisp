@@ -66,9 +66,6 @@ typedef struct {
     bool initialized;         // 是否已初始化 / Whether initialized
 } ConfigManager;
 
-// 全局配置管理器 / Global Configuration Manager
-extern ConfigManager* g_config_manager;
-
 // 编译器配置结构 / Compiler Configuration Structure
 typedef struct {
     // 基本设置 / Basic Settings
