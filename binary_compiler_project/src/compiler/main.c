@@ -274,7 +274,7 @@ bool compile_file(const CompilerOptions* options) {
     tinycc_config.verbose = options->verbose;
     tinycc_config.include_paths = NULL;
     tinycc_config.library_paths = NULL;
-    tinycc_config.libraries = NULL;
+    tinycc_config.libraries = "m"; // 链接数学库 / Link math library
 
     TinyccResult* result = tinycc_compile_to_executable(c_code, &tinycc_config);
     if (result && result->success) {

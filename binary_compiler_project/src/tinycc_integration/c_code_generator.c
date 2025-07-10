@@ -378,6 +378,24 @@ static bool is_arithmetic_operator(const char* name) {
             strcmp(name, "not") == 0);
 }
 
+// 检查是否为列表操作函数 / Check if list operation function
+static bool is_list_operator(const char* name) {
+    return (strcmp(name, "list") == 0 || strcmp(name, "first") == 0 ||
+            strcmp(name, "rest") == 0 || strcmp(name, "length") == 0 ||
+            strcmp(name, "cons") == 0);
+}
+
+// 检查是否为字符串操作函数 / Check if string operation function
+static bool is_string_operator(const char* name) {
+    return (strcmp(name, "string-length") == 0 || strcmp(name, "str-len") == 0);
+}
+
+// 检查是否为数学函数 / Check if math function
+static bool is_math_function(const char* name) {
+    return (strcmp(name, "sqrt") == 0 || strcmp(name, "sin") == 0 ||
+            strcmp(name, "cos") == 0 || strcmp(name, "log") == 0);
+}
+
 static bool is_comparison_operator(const char* name) {
     return (strcmp(name, "=") == 0 || strcmp(name, "!=") == 0 ||
             strcmp(name, "<") == 0 || strcmp(name, "<=") == 0 ||
@@ -845,6 +863,21 @@ char* codegen_generate_expression(CodeGenerator* codegen, ASTNode* node) {
                             return result;
                         }
                     }
+                } else if (is_list_operator(func_name)) {
+                    // 处理列表操作 / Handle list operations
+                    return codegen_generate_list_operation(codegen, func_name,
+                                                         node->data.call.arguments,
+                                                         node->data.call.arg_count);
+                } else if (is_string_operator(func_name)) {
+                    // 处理字符串操作 / Handle string operations
+                    return codegen_generate_string_operation(codegen, func_name,
+                                                           node->data.call.arguments,
+                                                           node->data.call.arg_count);
+                } else if (is_math_function(func_name)) {
+                    // 处理数学函数 / Handle math functions
+                    return codegen_generate_math_function(codegen, func_name,
+                                                        node->data.call.arguments,
+                                                        node->data.call.arg_count);
                 }
 
                 // 检查是否为用户自定义函数 / Check if it's a user-defined function
@@ -1196,6 +1229,14 @@ bool codegen_generate_headers(CodeGenerator* codegen) {
     codebuffer_append_line(codegen->buffer, "typedef int nl_bool;");
     codebuffer_append_line(codegen->buffer, "");
 
+    // 列表类型定义 / List type definitions
+    codebuffer_append_line(codegen->buffer, "// Simple list implementation");
+    codebuffer_append_line(codegen->buffer, "typedef struct nl_list {");
+    codebuffer_append_line(codegen->buffer, "    nl_int value;");
+    codebuffer_append_line(codegen->buffer, "    struct nl_list* next;");
+    codebuffer_append_line(codegen->buffer, "} nl_list;");
+    codebuffer_append_line(codegen->buffer, "");
+
     return true;
 }
 
@@ -1235,6 +1276,59 @@ bool codegen_generate_runtime_support(CodeGenerator* codegen) {
     codebuffer_append_line(codegen->buffer, "void nl_print_float(nl_float value) {");
     codebuffer_indent(codegen->buffer);
     codebuffer_append_line(codegen->buffer, "printf(\"%.6f\", value);");
+    codebuffer_dedent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "}");
+    codebuffer_append_line(codegen->buffer, "");
+
+    // 列表操作函数 / List operation functions
+    codebuffer_append_line(codegen->buffer, "// Simple list operations");
+    codebuffer_append_line(codegen->buffer, "nl_list* nl_create_list(nl_int value) {");
+    codebuffer_indent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "nl_list* list = malloc(sizeof(nl_list));");
+    codebuffer_append_line(codegen->buffer, "if (list) {");
+    codebuffer_indent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "list->value = value;");
+    codebuffer_append_line(codegen->buffer, "list->next = NULL;");
+    codebuffer_dedent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "}");
+    codebuffer_append_line(codegen->buffer, "return list;");
+    codebuffer_dedent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "}");
+    codebuffer_append_line(codegen->buffer, "");
+
+    codebuffer_append_line(codegen->buffer, "nl_list* nl_empty_list() {");
+    codebuffer_indent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "return NULL;");
+    codebuffer_dedent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "}");
+    codebuffer_append_line(codegen->buffer, "");
+
+    codebuffer_append_line(codegen->buffer, "nl_int nl_first(nl_list* list) {");
+    codebuffer_indent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "return list ? list->value : 0;");
+    codebuffer_dedent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "}");
+    codebuffer_append_line(codegen->buffer, "");
+
+    codebuffer_append_line(codegen->buffer, "nl_int nl_length(nl_list* list) {");
+    codebuffer_indent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "nl_int count = 0;");
+    codebuffer_append_line(codegen->buffer, "while (list) {");
+    codebuffer_indent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "count++;");
+    codebuffer_append_line(codegen->buffer, "list = list->next;");
+    codebuffer_dedent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "}");
+    codebuffer_append_line(codegen->buffer, "return count;");
+    codebuffer_dedent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "}");
+    codebuffer_append_line(codegen->buffer, "");
+
+    // 字符串操作函数 / String operation functions
+    codebuffer_append_line(codegen->buffer, "// String operations");
+    codebuffer_append_line(codegen->buffer, "nl_int nl_string_length(nl_string str) {");
+    codebuffer_indent(codegen->buffer);
+    codebuffer_append_line(codegen->buffer, "return str ? strlen(str) : 0;");
     codebuffer_dedent(codegen->buffer);
     codebuffer_append_line(codegen->buffer, "}");
     codebuffer_append_line(codegen->buffer, "");
@@ -1381,5 +1475,123 @@ char* codegen_generate_max_min(CodeGenerator* codegen, ASTNode** args, size_t ar
     memory_free(arg1);
     memory_free(arg2);
 
+    return result;
+}
+
+/**
+ * @brief 生成列表操作代码 / Generate list operation code
+ */
+char* codegen_generate_list_operation(CodeGenerator* codegen, const char* func_name, ASTNode** args, size_t arg_count) {
+    if (!codegen || !func_name || !args) return NULL;
+
+    // list函数：创建列表 / list function: create list
+    if (strcmp(func_name, "list") == 0) {
+        if (arg_count == 0) {
+            // 空列表 / Empty list
+            char* result = (char*)memory_alloc(32, MEM_TYPE_TEMP);
+            if (result) strcpy(result, "nl_empty_list()");
+            return result;
+        }
+
+        // 简化实现：只支持单元素列表 / Simplified: only support single-element lists
+        if (arg_count == 1) {
+            char* arg_code = codegen_generate_expression(codegen, args[0]);
+            if (!arg_code) return NULL;
+
+            size_t result_len = strlen(arg_code) + 32;
+            char* result = (char*)memory_alloc(result_len, MEM_TYPE_TEMP);
+            if (!result) {
+                memory_free(arg_code);
+                return NULL;
+            }
+
+            snprintf(result, result_len, "nl_create_list(%s)", arg_code);
+            memory_free(arg_code);
+            return result;
+        }
+    }
+
+    // first函数：获取第一个元素 / first function: get first element
+    if (strcmp(func_name, "first") == 0 && arg_count == 1) {
+        char* arg_code = codegen_generate_expression(codegen, args[0]);
+        if (!arg_code) return NULL;
+
+        size_t result_len = strlen(arg_code) + 32;
+        char* result = (char*)memory_alloc(result_len, MEM_TYPE_TEMP);
+        if (!result) {
+            memory_free(arg_code);
+            return NULL;
+        }
+
+        snprintf(result, result_len, "nl_first(%s)", arg_code);
+        memory_free(arg_code);
+        return result;
+    }
+
+    // length函数：获取列表长度 / length function: get list length
+    if (strcmp(func_name, "length") == 0 && arg_count == 1) {
+        char* arg_code = codegen_generate_expression(codegen, args[0]);
+        if (!arg_code) return NULL;
+
+        size_t result_len = strlen(arg_code) + 32;
+        char* result = (char*)memory_alloc(result_len, MEM_TYPE_TEMP);
+        if (!result) {
+            memory_free(arg_code);
+            return NULL;
+        }
+
+        snprintf(result, result_len, "nl_length(%s)", arg_code);
+        memory_free(arg_code);
+        return result;
+    }
+
+    return NULL;
+}
+
+/**
+ * @brief 生成字符串操作代码 / Generate string operation code
+ */
+char* codegen_generate_string_operation(CodeGenerator* codegen, const char* func_name, ASTNode** args, size_t arg_count) {
+    if (!codegen || !func_name || !args) return NULL;
+
+    // string-length函数：获取字符串长度 / string-length function: get string length
+    if ((strcmp(func_name, "string-length") == 0 || strcmp(func_name, "str-len") == 0) && arg_count == 1) {
+        char* arg_code = codegen_generate_expression(codegen, args[0]);
+        if (!arg_code) return NULL;
+
+        size_t result_len = strlen(arg_code) + 32;
+        char* result = (char*)memory_alloc(result_len, MEM_TYPE_TEMP);
+        if (!result) {
+            memory_free(arg_code);
+            return NULL;
+        }
+
+        snprintf(result, result_len, "nl_string_length(%s)", arg_code);
+        memory_free(arg_code);
+        return result;
+    }
+
+    return NULL;
+}
+
+/**
+ * @brief 生成数学函数代码 / Generate math function code
+ */
+char* codegen_generate_math_function(CodeGenerator* codegen, const char* func_name, ASTNode** args, size_t arg_count) {
+    if (!codegen || !func_name || !args || arg_count != 1) return NULL;
+
+    char* arg_code = codegen_generate_expression(codegen, args[0]);
+    if (!arg_code) return NULL;
+
+    size_t result_len = strlen(arg_code) + 32;
+    char* result = (char*)memory_alloc(result_len, MEM_TYPE_TEMP);
+    if (!result) {
+        memory_free(arg_code);
+        return NULL;
+    }
+
+    // 直接使用C标准库数学函数 / Use C standard library math functions directly
+    snprintf(result, result_len, "%s(%s)", func_name, arg_code);
+    memory_free(arg_code);
     return result;
 }

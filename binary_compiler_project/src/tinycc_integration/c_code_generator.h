@@ -352,6 +352,36 @@ bool codegen_has_errors(const CodeGenerator* codegen);
  */
 char* codegen_generate_max_min(CodeGenerator* codegen, ASTNode** args, size_t arg_count, bool is_max);
 
+/**
+ * @brief 生成列表操作代码 / Generate list operation code
+ * @param codegen 代码生成器 / Code generator
+ * @param func_name 函数名 / Function name
+ * @param args 参数数组 / Arguments array
+ * @param arg_count 参数数量 / Argument count
+ * @return 生成的代码字符串 / Generated code string
+ */
+char* codegen_generate_list_operation(CodeGenerator* codegen, const char* func_name, ASTNode** args, size_t arg_count);
+
+/**
+ * @brief 生成字符串操作代码 / Generate string operation code
+ * @param codegen 代码生成器 / Code generator
+ * @param func_name 函数名 / Function name
+ * @param args 参数数组 / Arguments array
+ * @param arg_count 参数数量 / Argument count
+ * @return 生成的代码字符串 / Generated code string
+ */
+char* codegen_generate_string_operation(CodeGenerator* codegen, const char* func_name, ASTNode** args, size_t arg_count);
+
+/**
+ * @brief 生成数学函数代码 / Generate math function code
+ * @param codegen 代码生成器 / Code generator
+ * @param func_name 函数名 / Function name
+ * @param args 参数数组 / Arguments array
+ * @param arg_count 参数数量 / Argument count
+ * @return 生成的代码字符串 / Generated code string
+ */
+char* codegen_generate_math_function(CodeGenerator* codegen, const char* func_name, ASTNode** args, size_t arg_count);
+
 #ifdef __cplusplus
 }
 #endif
