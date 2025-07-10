@@ -1,0 +1,125 @@
+{
+  "tests": [
+    {
+      "test_file": "basic/arithmetic/test_plus.lsp",
+      "compiler": {
+        "success": true,
+        "output": ">>>>> Testing function: +\n>>>>> + function test SUCCESSFUL\n",
+        "error": "",
+        "compile_time": 0.013708353042602539,
+        "execution_time": 0.0011861324310302734,
+        "total_time": 0.014894485473632812
+      },
+      "interpreter": {
+        "success": false,
+        "output": "",
+        "error": "Command '['../../newlisp', 'basic/arithmetic/test_plus.lsp']' timed out after 10 seconds",
+        "execution_time": 0
+      },
+      "output_comparison": null,
+      "timestamp": 1752034306.5368366
+    },
+    {
+      "test_file": "basic/arithmetic/test_minus.lsp",
+      "compiler": {
+        "success": true,
+        "output": ">>>>> Testing function: -\n>>>>> - function test SUCCESSFUL\n",
+        "error": "",
+        "compile_time": 0.013688802719116211,
+        "execution_time": 0.0014569759368896484,
+        "total_time": 0.01514577865600586
+      },
+      "interpreter": {
+        "success": false,
+        "output": "",
+        "error": "Command '['../../newlisp', 'basic/arithmetic/test_minus.lsp']' timed out after 10 seconds",
+        "execution_time": 0
+      },
+      "output_comparison": null,
+      "timestamp": 1752034316.5636592
+    },
+    {
+      "test_file": "basic/arithmetic/test_multiply.lsp",
+      "compiler": {
+        "success": false,
+        "output": "",
+        "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752034316.c:39: error: pointer expected\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+        "compile_time": 0.013234615325927734,
+        "execution_time": 0,
+        "total_time": 0.013234615325927734
+      },
+      "interpreter": {
+        "success": false,
+        "output": "",
+        "error": "Command '['../../newlisp', 'basic/arithmetic/test_multiply.lsp']' timed out after 10 seconds",
+        "execution_time": 0
+      },
+      "output_comparison": null,
+      "timestamp": 1752034326.5883396
+    },
+    {
+      "test_file": "basic/arithmetic/test_divide.lsp",
+      "compiler": {
+        "success": false,
+        "output": "",
+        "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752034326.c:39: error: identifier expected\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+        "compile_time": 0.012500762939453125,
+        "execution_time": 0,
+        "total_time": 0.012500762939453125
+      },
+      "interpreter": {
+        "success": false,
+        "output": ">>>>> Testing function: /\n\nERR: division by zero in function /\n",
+        "error": "",
+        "execution_time": 0.0020477771759033203
+      },
+      "output_comparison": null,
+      "timestamp": 1752034326.6029873
+    },
+    {
+      "test_file": "basic/io/test_println.lsp",
+      "compiler": {
+        "success": true,
+        "output": ">>>>> Testing function: println\nHello\nWorld\n\n>>>>> println function test SUCCESSFUL\n",
+        "error": "",
+        "compile_time": 0.012986421585083008,
+        "execution_time": 0.0012633800506591797,
+        "total_time": 0.014249801635742188
+      },
+      "interpreter": {
+        "success": false,
+        "output": "",
+        "error": "Command '['../../newlisp', 'basic/io/test_println.lsp']' timed out after 10 seconds",
+        "execution_time": 0
+      },
+      "output_comparison": null,
+      "timestamp": 1752034336.6287224
+    },
+    {
+      "test_file": "basic/io/test_print.lsp",
+      "compiler": {
+        "success": false,
+        "output": "",
+        "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752034336.c:28: warning: implicit declaration of function 'nl_print'\ntcc: error: undefined symbol 'nl_print'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+        "compile_time": 0.01390838623046875,
+        "execution_time": 0,
+        "total_time": 0.01390838623046875
+      },
+      "interpreter": {
+        "success": false,
+        "output": "",
+        "error": "Command '['../../newlisp', 'basic/io/test_print.lsp']' timed out after 10 seconds",
+        "execution_time": 0
+      },
+      "output_comparison": null,
+      "timestamp": 1752034346.6540856
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "compiler_success": 3,
+    "interpreter_success": 0,
+    "both_success": 0,
+    "performance_data": []
+  }
+}

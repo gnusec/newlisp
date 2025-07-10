@@ -1,0 +1,1039 @@
+{
+  "summary": {
+    "total_tests": 45,
+    "consistent": 43,
+    "inconsistent": 1,
+    "errors": 1,
+    "consistency_rate": 95.55555555555556
+  },
+  "detailed_results": [
+    {
+      "test_case": "(+ 1 2)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(+ 10 20 30)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(+ 1.5 2.5)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(+ 0 0)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(+ -5 5)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(+ 1000000 2000000)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(- 1 2)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(- 10 20 30)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(- 1.5 2.5)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(- 0 0)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(- -5 5)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(- 1000000 2000000)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(* 1 2)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(* 10 20 30)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(* 1.5 2.5)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(* 0 0)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(* -5 5)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(* 1000000 2000000)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(/ 1 2)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(/ 10 20 30)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(/ 1.5 2.5)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(/ 0 0)",
+      "status": "error",
+      "compiler_result": {
+        "success": false,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": false,
+        "output": "ERR: division by zero in function /",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": null
+    },
+    {
+      "test_case": "(/ -5 5)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(/ 1000000 2000000)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(println \"Hello World\")",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "Hello World",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "Hello World",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "Hello World",
+        "interpreter_output": "Hello World",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(println 42)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "42",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "42",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "42",
+        "interpreter_output": "42",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(println 3.14159)",
+      "status": "inconsistent",
+      "compiler_result": {
+        "success": true,
+        "output": "3.141590",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "3.14159",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": false,
+        "compiler_output": "3.141590",
+        "interpreter_output": "3.14159",
+        "difference": "Line 1: '3.141590' vs '3.14159'"
+      }
+    },
+    {
+      "test_case": "(println \"\")",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(println \"String with spaces and numbers 123\")",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "String with spaces and numbers 123",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "String with spaces and numbers 123",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "String with spaces and numbers 123",
+        "interpreter_output": "String with spaces and numbers 123",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(+ (* 2 3) (* 4 5))",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(- (* 10 5) (* 2 3))",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(* (+ 1 2) (+ 3 4))",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(/ (+ 10 20) (+ 2 3))",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(+ (+ (+ 1 2) (+ 3 4)) (+ (+ 5 6) (+ 7 8)))",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(* (* (* 2 2) (* 3 3)) (* (* 4 4) (* 5 5)))",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(+ 0)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(* 1)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(+ 999999999 1)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(- -999999999 1)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(/ 1000000000 1000)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(+ 0.000001 0.000002)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(* 1.5 1.5 1.5 1.5)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(+ 1 2 3 4 5 6 7 8 9 10)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(* 1 1 1 1 1 1 1 1 1 2)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    },
+    {
+      "test_case": "(+ 100 200 300 400 500 600 700 800 900 1000)",
+      "status": "consistent",
+      "compiler_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": true,
+        "compiler_output": "",
+        "interpreter_output": "",
+        "difference": "No difference"
+      }
+    }
+  ],
+  "inconsistent_cases": [
+    {
+      "test_case": "(println 3.14159)",
+      "status": "inconsistent",
+      "compiler_result": {
+        "success": true,
+        "output": "3.141590",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": true,
+        "output": "3.14159",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": {
+        "identical": false,
+        "compiler_output": "3.141590",
+        "interpreter_output": "3.14159",
+        "difference": "Line 1: '3.141590' vs '3.14159'"
+      }
+    }
+  ],
+  "error_cases": [
+    {
+      "test_case": "(/ 0 0)",
+      "status": "error",
+      "compiler_result": {
+        "success": false,
+        "output": "",
+        "error": "",
+        "stage": "execution"
+      },
+      "interpreter_result": {
+        "success": false,
+        "output": "ERR: division by zero in function /",
+        "error": "",
+        "stage": "execution"
+      },
+      "comparison": null
+    }
+  ]
+}

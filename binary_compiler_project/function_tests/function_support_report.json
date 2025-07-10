@@ -1,0 +1,2924 @@
+{
+  "summary": {
+    "total_functions": 58,
+    "supported_functions": 23,
+    "unsupported_functions": 35,
+    "support_rate": 39.6551724137931
+  },
+  "supported": {
+    "+": {
+      "function": "+",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(+ 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(+ 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(+ 1.5 2.5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(+ 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(+ 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(+ 1.5 2.5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "-": {
+      "function": "-",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(- 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(- 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(- 1.5 2.5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(- 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(- 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(- 1.5 2.5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "*": {
+      "function": "*",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(* 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(* 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(* 1.5 2.5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(* 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(* 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(* 1.5 2.5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "/": {
+      "function": "/",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(/ 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(/ 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(/ 1.5 2.5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(/ 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(/ 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(/ 1.5 2.5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "mod": {
+      "function": "mod",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(mod 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(mod 1)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "abs": {
+      "function": "abs",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(abs 5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(abs 5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "max": {
+      "function": "max",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(max 1 2 3 4 5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(max 1 2 3 4 5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "min": {
+      "function": "min",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(min 1 2 3 4 5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(min 1 2 3 4 5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "=": {
+      "function": "=",
+      "category": "comparison",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(= 5 10)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(= 5 10)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "!=": {
+      "function": "!=",
+      "category": "comparison",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(!= 5 10)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(!= 5 10)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "<": {
+      "function": "<",
+      "category": "comparison",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(< 5 10)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(< 5 10)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "<=": {
+      "function": "<=",
+      "category": "comparison",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(<= 5 10)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(<= 5 10)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    ">": {
+      "function": ">",
+      "category": "comparison",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(> 5 10)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(> 5 10)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    ">=": {
+      "function": ">=",
+      "category": "comparison",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(>= 5 10)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(>= 5 10)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "and": {
+      "function": "and",
+      "category": "logical",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(and (= 1 1) (= 2 2))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(and (= 1 1) (= 2 2))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "or": {
+      "function": "or",
+      "category": "logical",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(or (= 1 1) (= 2 2))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(or (= 1 1) (= 2 2))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "not": {
+      "function": "not",
+      "category": "logical",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(not (= 1 2))"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(not (= 1 1))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(not (= 1 2))"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(not (= 1 1))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "println": {
+      "function": "println",
+      "category": "io",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nHello\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(println \"Hello\")"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n42\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(println 42)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nHello\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(println \"Hello\")"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n42\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(println 42)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "if": {
+      "function": "if",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\ntrue branch\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(if (> 5 3) (println \"true branch\") (println \"false branch\"))"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\nfalse branch\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(if (< 5 3) (println \"true branch\") (println \"false branch\"))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\ntrue branch\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(if (> 5 3) (println \"true branch\") (println \"false branch\"))"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\nfalse branch\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(if (< 5 3) (println \"true branch\") (println \"false branch\"))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "when": {
+      "function": "when",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nwhen executed\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(when (> 5 3) (println \"when executed\"))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nwhen executed\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(when (> 5 3) (println \"when executed\"))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "unless": {
+      "function": "unless",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nunless executed\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(unless (< 5 3) (println \"unless executed\"))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nunless executed\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(unless (< 5 3) (println \"unless executed\"))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "while": {
+      "function": "while",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(while (> 1 2) (println \"should not execute\"))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(while (> 1 2) (println \"should not execute\"))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "set": {
+      "function": "set",
+      "category": "variables",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(set x 42)"
+        },
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: error: 'var_x' undeclared\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(println x)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: symbol expected in function set : x\n",
+          "error": "",
+          "test_case": "(set x 42)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\nnil\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(println x)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    }
+  },
+  "unsupported": {
+    "sqrt": {
+      "function": "sqrt",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_sqrt'\ntcc: error: undefined symbol 'var_sqrt'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(sqrt 5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(sqrt 5)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "pow": {
+      "function": "pow",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_pow'\ntcc: error: undefined symbol 'var_pow'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(pow 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(pow 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "exp": {
+      "function": "exp",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_exp'\ntcc: error: undefined symbol 'var_exp'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(exp 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(exp 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "log": {
+      "function": "log",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_log'\ntcc: error: undefined symbol 'var_log'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(log 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(log 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "sin": {
+      "function": "sin",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_sin'\ntcc: error: undefined symbol 'var_sin'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(sin 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(sin 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "cos": {
+      "function": "cos",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_cos'\ntcc: error: undefined symbol 'var_cos'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(cos 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(cos 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "tan": {
+      "function": "tan",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_tan'\ntcc: error: undefined symbol 'var_tan'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(tan 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(tan 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "print": {
+      "function": "print",
+      "category": "io",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'nl_print'\ntcc: error: undefined symbol 'nl_print'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(print \"Hello\")"
+        },
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'nl_print'\ntcc: error: undefined symbol 'nl_print'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(print 42)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nHello>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(print \"Hello\")"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n42>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(print 42)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "read": {
+      "function": "read",
+      "category": "io",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_read'\ntcc: error: undefined symbol 'var_read'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(read 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: no reference found in function read\n",
+          "error": "",
+          "test_case": "(read 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "write": {
+      "function": "write",
+      "category": "io",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_write'\ntcc: error: undefined symbol 'var_write'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(write 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(write 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "string": {
+      "function": "string",
+      "category": "string",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_string'\ntcc: error: undefined symbol 'var_string'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(string 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(string 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "append": {
+      "function": "append",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_append'\ntcc: error: undefined symbol 'var_append'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(append 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: array, list or string expected in function append : 1\n",
+          "error": "",
+          "test_case": "(append 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "length": {
+      "function": "length",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_length'\ntcc: error: undefined symbol 'var_length'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(length 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(length 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "upper-case": {
+      "function": "upper-case",
+      "category": "string",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_upper_case'\ntcc: error: undefined symbol 'var_upper_case'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(upper-case 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: string expected in function upper-case : 1\n",
+          "error": "",
+          "test_case": "(upper-case 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "lower-case": {
+      "function": "lower-case",
+      "category": "string",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_lower_case'\ntcc: error: undefined symbol 'var_lower_case'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(lower-case 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: string expected in function lower-case : 1\n",
+          "error": "",
+          "test_case": "(lower-case 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "trim": {
+      "function": "trim",
+      "category": "string",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_trim'\ntcc: error: undefined symbol 'var_trim'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(trim 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: string expected in function trim : 1\n",
+          "error": "",
+          "test_case": "(trim 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "find": {
+      "function": "find",
+      "category": "string",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_find'\ntcc: error: undefined symbol 'var_find'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(find 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list or string expected in function find : nil\n",
+          "error": "",
+          "test_case": "(find 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "replace": {
+      "function": "replace",
+      "category": "string",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_replace'\ntcc: error: undefined symbol 'var_replace'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(replace 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list or string expected in function replace : nil\n",
+          "error": "",
+          "test_case": "(replace 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "list": {
+      "function": "list",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_list'\ntcc: error: undefined symbol 'var_list'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(list 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(list 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "first": {
+      "function": "first",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_first'\ntcc: error: undefined symbol 'var_first'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(first 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: array, list or string expected in function first : 1\n",
+          "error": "",
+          "test_case": "(first 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "last": {
+      "function": "last",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_last'\ntcc: error: undefined symbol 'var_last'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(last 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: array, list or string expected in function last : 1\n",
+          "error": "",
+          "test_case": "(last 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "rest": {
+      "function": "rest",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_rest'\ntcc: error: undefined symbol 'var_rest'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(rest 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: array, list or string expected in function rest : 1\n",
+          "error": "",
+          "test_case": "(rest 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "cons": {
+      "function": "cons",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_cons'\ntcc: error: undefined symbol 'var_cons'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(cons 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(cons 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "nth": {
+      "function": "nth",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_nth'\ntcc: error: undefined symbol 'var_nth'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(nth 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list expected in function nth : nil\n",
+          "error": "",
+          "test_case": "(nth 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "push": {
+      "function": "push",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_push'\ntcc: error: undefined symbol 'var_push'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(push 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list or string expected in function push : nil\n",
+          "error": "",
+          "test_case": "(push 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "pop": {
+      "function": "pop",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_pop'\ntcc: error: undefined symbol 'var_pop'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(pop 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list or string expected in function pop : 1\n",
+          "error": "",
+          "test_case": "(pop 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "sort": {
+      "function": "sort",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_sort'\ntcc: error: undefined symbol 'var_sort'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(sort 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list or array expected in function sort : 1\n",
+          "error": "",
+          "test_case": "(sort 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "reverse": {
+      "function": "reverse",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_reverse'\ntcc: error: undefined symbol 'var_reverse'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(reverse 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: array, list or string expected in function reverse : 1\n",
+          "error": "",
+          "test_case": "(reverse 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "cond": {
+      "function": "cond",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "[ERROR] COMPILE:codegen_error:-1 - Code generation error: Unsupported expression type for code generation (src/tinycc_integration/c_code_generator.c:1149)\n[ERROR] COMPILE:codegen_error:-1 - Code generation error: Unsupported expression type for code generation (src/tinycc_integration/c_code_generator.c:1149)\n\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_cond'\n/tmp/nlcc_temp_1_1752050363.c:32: error: identifier expected\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(cond ((> 5 3) (println \"first condition\")) (true (println \"default\")))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nfirst condition\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(cond ((> 5 3) (println \"first condition\")) (true (println \"default\")))"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "for": {
+      "function": "for",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_for'\ntcc: error: undefined symbol 'var_for'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(for 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list expected in function for : 1\n",
+          "error": "",
+          "test_case": "(for 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "dolist": {
+      "function": "dolist",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_dolist'\ntcc: error: undefined symbol 'var_dolist'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(dolist 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list expected in function dolist : 1\n",
+          "error": "",
+          "test_case": "(dolist 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "dotimes": {
+      "function": "dotimes",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_dotimes'\ntcc: error: undefined symbol 'var_dotimes'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(dotimes 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list expected in function dotimes : 1\n",
+          "error": "",
+          "test_case": "(dotimes 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "setq": {
+      "function": "setq",
+      "category": "variables",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_setq'\ntcc: error: undefined symbol 'var_setq'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(setq 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: missing argument in function setf\n",
+          "error": "",
+          "test_case": "(setq 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "define": {
+      "function": "define",
+      "category": "definition",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_define'\ntcc: error: undefined symbol 'var_define'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(define 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list or symbol expected in function define : 1\n",
+          "error": "",
+          "test_case": "(define 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "lambda": {
+      "function": "lambda",
+      "category": "definition",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_lambda'\ntcc: error: undefined symbol 'var_lambda'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(lambda 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(lambda 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    }
+  },
+  "detailed_results": {
+    "+": {
+      "function": "+",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(+ 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(+ 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(+ 1.5 2.5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(+ 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(+ 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(+ 1.5 2.5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "-": {
+      "function": "-",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(- 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(- 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(- 1.5 2.5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(- 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(- 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(- 1.5 2.5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "*": {
+      "function": "*",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(* 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(* 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(* 1.5 2.5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(* 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(* 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(* 1.5 2.5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "/": {
+      "function": "/",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(/ 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(/ 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(/ 1.5 2.5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(/ 1 2)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(/ 10 20 30)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(/ 1.5 2.5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "mod": {
+      "function": "mod",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(mod 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(mod 1)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "abs": {
+      "function": "abs",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(abs 5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(abs 5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "max": {
+      "function": "max",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(max 1 2 3 4 5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(max 1 2 3 4 5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "min": {
+      "function": "min",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(min 1 2 3 4 5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(min 1 2 3 4 5)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "sqrt": {
+      "function": "sqrt",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_sqrt'\ntcc: error: undefined symbol 'var_sqrt'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(sqrt 5)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(sqrt 5)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "pow": {
+      "function": "pow",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_pow'\ntcc: error: undefined symbol 'var_pow'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(pow 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(pow 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "exp": {
+      "function": "exp",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_exp'\ntcc: error: undefined symbol 'var_exp'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(exp 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(exp 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "log": {
+      "function": "log",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_log'\ntcc: error: undefined symbol 'var_log'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(log 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(log 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "sin": {
+      "function": "sin",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_sin'\ntcc: error: undefined symbol 'var_sin'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(sin 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(sin 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "cos": {
+      "function": "cos",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_cos'\ntcc: error: undefined symbol 'var_cos'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(cos 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(cos 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "tan": {
+      "function": "tan",
+      "category": "arithmetic",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050362.c:32: warning: implicit declaration of function 'var_tan'\ntcc: error: undefined symbol 'var_tan'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(tan 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(tan 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "=": {
+      "function": "=",
+      "category": "comparison",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(= 5 10)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(= 5 10)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "!=": {
+      "function": "!=",
+      "category": "comparison",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(!= 5 10)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(!= 5 10)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "<": {
+      "function": "<",
+      "category": "comparison",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(< 5 10)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(< 5 10)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "<=": {
+      "function": "<=",
+      "category": "comparison",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(<= 5 10)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(<= 5 10)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    ">": {
+      "function": ">",
+      "category": "comparison",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(> 5 10)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(> 5 10)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    ">=": {
+      "function": ">=",
+      "category": "comparison",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(>= 5 10)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(>= 5 10)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "and": {
+      "function": "and",
+      "category": "logical",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(and (= 1 1) (= 2 2))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(and (= 1 1) (= 2 2))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "or": {
+      "function": "or",
+      "category": "logical",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(or (= 1 1) (= 2 2))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(or (= 1 1) (= 2 2))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "not": {
+      "function": "not",
+      "category": "logical",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(not (= 1 2))"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(not (= 1 1))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(not (= 1 2))"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(not (= 1 1))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "println": {
+      "function": "println",
+      "category": "io",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nHello\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(println \"Hello\")"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n42\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(println 42)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nHello\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(println \"Hello\")"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n42\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(println 42)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "print": {
+      "function": "print",
+      "category": "io",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'nl_print'\ntcc: error: undefined symbol 'nl_print'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(print \"Hello\")"
+        },
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'nl_print'\ntcc: error: undefined symbol 'nl_print'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(print 42)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nHello>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(print \"Hello\")"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\n42>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(print 42)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "read": {
+      "function": "read",
+      "category": "io",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_read'\ntcc: error: undefined symbol 'var_read'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(read 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: no reference found in function read\n",
+          "error": "",
+          "test_case": "(read 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "write": {
+      "function": "write",
+      "category": "io",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_write'\ntcc: error: undefined symbol 'var_write'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(write 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(write 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "string": {
+      "function": "string",
+      "category": "string",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_string'\ntcc: error: undefined symbol 'var_string'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(string 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(string 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "append": {
+      "function": "append",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_append'\ntcc: error: undefined symbol 'var_append'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(append 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: array, list or string expected in function append : 1\n",
+          "error": "",
+          "test_case": "(append 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "length": {
+      "function": "length",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_length'\ntcc: error: undefined symbol 'var_length'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(length 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(length 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "upper-case": {
+      "function": "upper-case",
+      "category": "string",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_upper_case'\ntcc: error: undefined symbol 'var_upper_case'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(upper-case 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: string expected in function upper-case : 1\n",
+          "error": "",
+          "test_case": "(upper-case 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "lower-case": {
+      "function": "lower-case",
+      "category": "string",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_lower_case'\ntcc: error: undefined symbol 'var_lower_case'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(lower-case 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: string expected in function lower-case : 1\n",
+          "error": "",
+          "test_case": "(lower-case 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "trim": {
+      "function": "trim",
+      "category": "string",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_trim'\ntcc: error: undefined symbol 'var_trim'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(trim 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: string expected in function trim : 1\n",
+          "error": "",
+          "test_case": "(trim 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "find": {
+      "function": "find",
+      "category": "string",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_find'\ntcc: error: undefined symbol 'var_find'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(find 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list or string expected in function find : nil\n",
+          "error": "",
+          "test_case": "(find 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "replace": {
+      "function": "replace",
+      "category": "string",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_replace'\ntcc: error: undefined symbol 'var_replace'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(replace 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list or string expected in function replace : nil\n",
+          "error": "",
+          "test_case": "(replace 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "list": {
+      "function": "list",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_list'\ntcc: error: undefined symbol 'var_list'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(list 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(list 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "first": {
+      "function": "first",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_first'\ntcc: error: undefined symbol 'var_first'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(first 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: array, list or string expected in function first : 1\n",
+          "error": "",
+          "test_case": "(first 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "last": {
+      "function": "last",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_last'\ntcc: error: undefined symbol 'var_last'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(last 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: array, list or string expected in function last : 1\n",
+          "error": "",
+          "test_case": "(last 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "rest": {
+      "function": "rest",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_rest'\ntcc: error: undefined symbol 'var_rest'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(rest 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: array, list or string expected in function rest : 1\n",
+          "error": "",
+          "test_case": "(rest 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "cons": {
+      "function": "cons",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_cons'\ntcc: error: undefined symbol 'var_cons'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(cons 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(cons 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "nth": {
+      "function": "nth",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_nth'\ntcc: error: undefined symbol 'var_nth'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(nth 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list expected in function nth : nil\n",
+          "error": "",
+          "test_case": "(nth 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "push": {
+      "function": "push",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_push'\ntcc: error: undefined symbol 'var_push'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(push 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list or string expected in function push : nil\n",
+          "error": "",
+          "test_case": "(push 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "pop": {
+      "function": "pop",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_pop'\ntcc: error: undefined symbol 'var_pop'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(pop 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list or string expected in function pop : 1\n",
+          "error": "",
+          "test_case": "(pop 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "sort": {
+      "function": "sort",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_sort'\ntcc: error: undefined symbol 'var_sort'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(sort 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list or array expected in function sort : 1\n",
+          "error": "",
+          "test_case": "(sort 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "reverse": {
+      "function": "reverse",
+      "category": "list",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_reverse'\ntcc: error: undefined symbol 'var_reverse'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(reverse 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: array, list or string expected in function reverse : 1\n",
+          "error": "",
+          "test_case": "(reverse 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "if": {
+      "function": "if",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\ntrue branch\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(if (> 5 3) (println \"true branch\") (println \"false branch\"))"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\nfalse branch\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(if (< 5 3) (println \"true branch\") (println \"false branch\"))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\ntrue branch\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(if (> 5 3) (println \"true branch\") (println \"false branch\"))"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\nfalse branch\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(if (< 5 3) (println \"true branch\") (println \"false branch\"))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "cond": {
+      "function": "cond",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "[ERROR] COMPILE:codegen_error:-1 - Code generation error: Unsupported expression type for code generation (src/tinycc_integration/c_code_generator.c:1149)\n[ERROR] COMPILE:codegen_error:-1 - Code generation error: Unsupported expression type for code generation (src/tinycc_integration/c_code_generator.c:1149)\n\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_cond'\n/tmp/nlcc_temp_1_1752050363.c:32: error: identifier expected\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(cond ((> 5 3) (println \"first condition\")) (true (println \"default\")))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nfirst condition\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(cond ((> 5 3) (println \"first condition\")) (true (println \"default\")))"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "when": {
+      "function": "when",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nwhen executed\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(when (> 5 3) (println \"when executed\"))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nwhen executed\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(when (> 5 3) (println \"when executed\"))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "unless": {
+      "function": "unless",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nunless executed\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(unless (< 5 3) (println \"unless executed\"))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\nunless executed\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(unless (< 5 3) (println \"unless executed\"))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "while": {
+      "function": "while",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(while (> 1 2) (println \"should not execute\"))"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(while (> 1 2) (println \"should not execute\"))"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "for": {
+      "function": "for",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_for'\ntcc: error: undefined symbol 'var_for'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(for 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list expected in function for : 1\n",
+          "error": "",
+          "test_case": "(for 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "dolist": {
+      "function": "dolist",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_dolist'\ntcc: error: undefined symbol 'var_dolist'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(dolist 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list expected in function dolist : 1\n",
+          "error": "",
+          "test_case": "(dolist 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "dotimes": {
+      "function": "dotimes",
+      "category": "control",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_dotimes'\ntcc: error: undefined symbol 'var_dotimes'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(dotimes 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list expected in function dotimes : 1\n",
+          "error": "",
+          "test_case": "(dotimes 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "set": {
+      "function": "set",
+      "category": "variables",
+      "compiler_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(set x 42)"
+        },
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: error: 'var_x' undeclared\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(println x)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: symbol expected in function set : x\n",
+          "error": "",
+          "test_case": "(set x 42)"
+        },
+        {
+          "success": true,
+          "output": ">>>>> Testing\nnil\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(println x)"
+        }
+      ],
+      "supported": true,
+      "issues": [],
+      "output_consistent": true
+    },
+    "setq": {
+      "function": "setq",
+      "category": "variables",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_setq'\ntcc: error: undefined symbol 'var_setq'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(setq 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: missing argument in function setf\n",
+          "error": "",
+          "test_case": "(setq 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "define": {
+      "function": "define",
+      "category": "definition",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_define'\ntcc: error: undefined symbol 'var_define'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(define 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": false,
+          "output": ">>>>> Testing\n\nERR: list or symbol expected in function define : 1\n",
+          "error": "",
+          "test_case": "(define 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    },
+    "lambda": {
+      "function": "lambda",
+      "category": "definition",
+      "compiler_tests": [
+        {
+          "success": false,
+          "output": "",
+          "error": "\u001b[31m[ERROR] [compiler] src/compiler/main.c:297:compile_file - Compilation failed: /tmp/nlcc_temp_1_1752050363.c:32: warning: implicit declaration of function 'var_lambda'\ntcc: error: undefined symbol 'var_lambda'\n\n\u001b[0mNo memory leaks detected.\n=========================\n\n",
+          "test_case": "(lambda 1)"
+        }
+      ],
+      "interpreter_tests": [
+        {
+          "success": true,
+          "output": ">>>>> Testing\n>>>>> SUCCESSFUL\n",
+          "error": "",
+          "test_case": "(lambda 1)"
+        }
+      ],
+      "supported": false,
+      "issues": []
+    }
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "total_functions": 23,
+  "supported_functions": 6,
+  "categories": {
+    "arithmetic": {
+      "total": 10,
+      "supported": 4,
+      "functions": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "mod",
+        "abs",
+        "max",
+        "min",
+        "sqrt",
+        "pow"
+      ]
+    },
+    "io": {
+      "total": 2,
+      "supported": 2,
+      "functions": [
+        "println",
+        "print"
+      ]
+    },
+    "string": {
+      "total": 3,
+      "supported": 0,
+      "functions": [
+        "string",
+        "append",
+        "length"
+      ]
+    },
+    "list": {
+      "total": 4,
+      "supported": 0,
+      "functions": [
+        "list",
+        "first",
+        "last",
+        "rest"
+      ]
+    },
+    "control": {
+      "total": 4,
+      "supported": 0,
+      "functions": [
+        "if",
+        "cond",
+        "while",
+        "for"
+      ]
+    }
+  },
+  "functions": {
+    "+": {
+      "name": "+",
+      "category": "arithmetic",
+      "supported": true,
+      "description": "Addition",
+      "platform_specific": false
+    },
+    "-": {
+      "name": "-",
+      "category": "arithmetic",
+      "supported": true,
+      "description": "Subtraction",
+      "platform_specific": false
+    },
+    "*": {
+      "name": "*",
+      "category": "arithmetic",
+      "supported": true,
+      "description": "Multiplication",
+      "platform_specific": false
+    },
+    "/": {
+      "name": "/",
+      "category": "arithmetic",
+      "supported": true,
+      "description": "Division",
+      "platform_specific": false
+    },
+    "mod": {
+      "name": "mod",
+      "category": "arithmetic",
+      "supported": false,
+      "description": "Modulo",
+      "platform_specific": false
+    },
+    "abs": {
+      "name": "abs",
+      "category": "arithmetic",
+      "supported": false,
+      "description": "Absolute value",
+      "platform_specific": false
+    },
+    "max": {
+      "name": "max",
+      "category": "arithmetic",
+      "supported": false,
+      "description": "Maximum",
+      "platform_specific": false
+    },
+    "min": {
+      "name": "min",
+      "category": "arithmetic",
+      "supported": false,
+      "description": "Minimum",
+      "platform_specific": false
+    },
+    "sqrt": {
+      "name": "sqrt",
+      "category": "arithmetic",
+      "supported": false,
+      "description": "Square root",
+      "platform_specific": false
+    },
+    "pow": {
+      "name": "pow",
+      "category": "arithmetic",
+      "supported": false,
+      "description": "Power",
+      "platform_specific": false
+    },
+    "println": {
+      "name": "println",
+      "category": "io",
+      "supported": true,
+      "description": "Print line",
+      "platform_specific": false
+    },
+    "print": {
+      "name": "print",
+      "category": "io",
+      "supported": true,
+      "description": "Print",
+      "platform_specific": false
+    },
+    "string": {
+      "name": "string",
+      "category": "string",
+      "supported": false,
+      "description": "String creation",
+      "platform_specific": false
+    },
+    "append": {
+      "name": "append",
+      "category": "string",
+      "supported": false,
+      "description": "String append",
+      "platform_specific": false
+    },
+    "length": {
+      "name": "length",
+      "category": "string",
+      "supported": false,
+      "description": "String length",
+      "platform_specific": false
+    },
+    "list": {
+      "name": "list",
+      "category": "list",
+      "supported": false,
+      "description": "List creation",
+      "platform_specific": false
+    },
+    "first": {
+      "name": "first",
+      "category": "list",
+      "supported": false,
+      "description": "First element",
+      "platform_specific": false
+    },
+    "last": {
+      "name": "last",
+      "category": "list",
+      "supported": false,
+      "description": "Last element",
+      "platform_specific": false
+    },
+    "rest": {
+      "name": "rest",
+      "category": "list",
+      "supported": false,
+      "description": "Rest of list",
+      "platform_specific": false
+    },
+    "if": {
+      "name": "if",
+      "category": "control",
+      "supported": false,
+      "description": "Conditional",
+      "platform_specific": false
+    },
+    "cond": {
+      "name": "cond",
+      "category": "control",
+      "supported": false,
+      "description": "Multi-conditional",
+      "platform_specific": false
+    },
+    "while": {
+      "name": "while",
+      "category": "control",
+      "supported": false,
+      "description": "While loop",
+      "platform_specific": false
+    },
+    "for": {
+      "name": "for",
+      "category": "control",
+      "supported": false,
+      "description": "For loop",
+      "platform_specific": false
+    }
+  }
+}
