@@ -1,0 +1,75 @@
+Benchmark started at: Thu Jul 10 02:21:26 UTC 2025
+Git commit: b807f3c600c555220d129123c17d09bd5e0b7072
+================================================
+Test 1: Compilation Speed Benchmark
+Testing: qa-tests/qa-basic-arithmetic.lsp
+  Compilation time: s
+Testing: qa-tests/qa-expressions.lsp
+  Compilation time: s
+Testing: qa-tests/qa-mixed-expressions.lsp
+  Compilation time: s
+Testing: qa-tests/qa-numbers.lsp
+  Compilation time: s
+Testing: qa-tests/qa-performance.lsp
+  Compilation time: s
+Testing: qa-tests/qa-simple-math.lsp
+  Compilation time: s
+Testing: qa-tests/qa-strings.lsp
+  Compilation time: s
+Testing: examples/arithmetic.lsp
+  Compilation time: s
+Testing: examples/complex.lsp
+  Compilation time: s
+Testing: examples/complex_functions.lsp
+  Compilation time: s
+Testing: examples/computation_heavy.lsp
+  Compilation time: s
+Testing: examples/hello.lsp
+  Compilation time: s
+Testing: examples/math.lsp
+  Compilation time: s
+Testing: examples/stress_test.lsp
+  Compilation time: s
+Testing: examples/test1_simple.lsp
+  Compilation time: s
+Testing: examples/test2_arithmetic.lsp
+  Compilation time: s
+Testing: examples/test3_nested.lsp
+  Compilation time: s
+Testing: examples/test4_string.lsp
+  Compilation time: s
+
+Test 2: Generated Code Size Benchmark
+Testing: examples/arithmetic.lsp
+  Executable size: 3248 bytes
+Testing: examples/complex.lsp
+  Executable size: 3248 bytes
+Testing: examples/complex_functions.lsp
+  Executable size: 3904 bytes
+Testing: examples/computation_heavy.lsp
+  Executable size: 3632 bytes
+Testing: examples/hello.lsp
+  Executable size: 3320 bytes
+Testing: examples/math.lsp
+  Executable size: 3536 bytes
+Testing: examples/stress_test.lsp
+  Executable size: 3584 bytes
+Testing: examples/test1_simple.lsp
+  Executable size: 3264 bytes
+Testing: examples/test2_arithmetic.lsp
+  Executable size: 3248 bytes
+Testing: examples/test3_nested.lsp
+  Executable size: 3248 bytes
+Testing: examples/test4_string.lsp
+  Executable size: 3272 bytes
+
+Test 3: Runtime Performance Benchmark
+Testing: benchmarks/perf_test.lsp
+
+Test 4: Memory Usage Benchmark
+  Valgrind not available, skipping memory test
+
+Benchmark Summary
+==================
+Benchmark completed at: Thu Jul 10 02:21:27 UTC 2025
+Results saved to: benchmarks/results/benchmark_20250710_022126.txt

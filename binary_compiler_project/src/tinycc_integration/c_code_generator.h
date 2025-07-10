@@ -48,12 +48,15 @@ typedef struct SymbolEntry {
     struct SymbolEntry* next; // 链表下一个 / Next in list
 } SymbolEntry;
 
+// 前向声明 / Forward declaration
+typedef struct SymbolTable SymbolTable;
+
 // 符号表 / Symbol Table
-typedef struct {
+struct SymbolTable {
     SymbolEntry* entries;     // 符号表项 / Symbol entries
     int count;                // 符号数量 / Symbol count
-    struct SymbolTable* parent; // 父符号表 / Parent symbol table
-} SymbolTable;
+    SymbolTable* parent;      // 父符号表 / Parent symbol table
+};
 
 // C代码生成器 / C Code Generator
 typedef struct {

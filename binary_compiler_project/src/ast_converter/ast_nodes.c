@@ -290,7 +290,7 @@ bool ast_list_add_element(ASTNode* list, ASTNode* element) {
  */
 ASTNode* ast_create_binary_op(BinaryOpType op, ASTNode* left, ASTNode* right) {
     if (!left || !right) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Binary operation operands cannot be NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Binary operation operands cannot be NULL%s", "");
         return NULL;
     }
     
@@ -310,7 +310,7 @@ ASTNode* ast_create_binary_op(BinaryOpType op, ASTNode* left, ASTNode* right) {
  */
 ASTNode* ast_create_unary_op(UnaryOpType op, ASTNode* operand) {
     if (!operand) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Unary operation operand cannot be NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Unary operation operand cannot be NULL%s", "");
         return NULL;
     }
 
@@ -328,7 +328,7 @@ ASTNode* ast_create_unary_op(UnaryOpType op, ASTNode* operand) {
  */
 ASTNode* ast_create_function_call(ASTNode* function, ASTNode** arguments, size_t arg_count) {
     if (!function) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Function cannot be NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Function cannot be NULL%s", "");
         return NULL;
     }
 
@@ -440,7 +440,7 @@ void ast_print_node(const ASTNode* node, int indent) {
  */
 ASTNode* ast_create_if(ASTNode* condition, ASTNode* then_branch, ASTNode* else_branch) {
     if (!condition || !then_branch) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "If condition and then branch cannot be NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "If condition and then branch cannot be NULL%s", "");
         return NULL;
     }
 
@@ -459,7 +459,7 @@ ASTNode* ast_create_if(ASTNode* condition, ASTNode* then_branch, ASTNode* else_b
  */
 ASTNode* ast_create_while(ASTNode* condition, ASTNode* body) {
     if (!condition || !body) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "While loop condition and body cannot be NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "While loop condition and body cannot be NULL%s", "");
         return NULL;
     }
 
@@ -490,7 +490,7 @@ ASTNode* ast_create_block(void) {
  */
 bool ast_block_add_statement(ASTNode* block, ASTNode* statement) {
     if (!block || block->type != AST_NODE_BLOCK || !statement) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Invalid block or statement");
+        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Invalid block or statement%s", "");
         return false;
     }
 
@@ -503,7 +503,7 @@ bool ast_block_add_statement(ASTNode* block, ASTNode* statement) {
     );
 
     if (!new_statements) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to expand block statements");
+        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to expand block statements%s", "");
         return false;
     }
 
@@ -519,7 +519,7 @@ bool ast_block_add_statement(ASTNode* block, ASTNode* statement) {
  */
 ASTNode* ast_create_variable_def(const char* name, ASTNode* value) {
     if (!name) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Variable name cannot be NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Variable name cannot be NULL%s", "");
         return NULL;
     }
 
@@ -543,7 +543,7 @@ ASTNode* ast_create_variable_def(const char* name, ASTNode* value) {
 ASTNode* ast_create_function_def(const char* name, char** parameters,
                                 size_t param_count, ASTNode* body) {
     if (!name || !body) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Function name and body cannot be NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_TYPE, -1, "Function name and body cannot be NULL%s", "");
         return NULL;
     }
 

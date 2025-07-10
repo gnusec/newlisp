@@ -25,7 +25,7 @@ static char* g_temp_dir = "/tmp";
 
 // 内部辅助函数 / Internal helper functions
 static void set_last_error(const char* error);
-static char* read_file_content(const char* filename);
+// static char* read_file_content(const char* filename); // 暂时未实现
 static bool file_exists(const char* filename);
 static char* generate_temp_filename(const char* prefix, const char* suffix);
 
@@ -208,6 +208,7 @@ TinyccResult* tinycc_compile_to_executable(const char* c_code, const TinyccConfi
     
     // 执行编译命令 / Execute compilation command
     clock_t start_time = clock();
+    (void)start_time; // 标记未使用，保留用于性能测量
     FILE* fp = popen(cmd, "r");
     
     if (!fp) {
@@ -235,6 +236,7 @@ TinyccResult* tinycc_compile_to_executable(const char* c_code, const TinyccConfi
     
     int exit_code = pclose(fp);
     clock_t end_time = clock();
+    (void)end_time; // 标记未使用，保留用于性能测量
     
     // 填充结果 / Fill result
     result->success = (exit_code == 0);

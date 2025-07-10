@@ -52,16 +52,16 @@ static void* remove_guard_bytes(void* ptr, size_t* size);
 bool memory_manager_init(const MemoryConfig* config) {
     // 检查是否已经初始化 / Check if already initialized
     if (g_memory_manager != NULL && g_memory_manager->initialized) {
-        ERROR_REPORT_WARNING(ERROR_TYPE_MEMORY, -1, 
-                            "Memory manager already initialized");
+        ERROR_REPORT_WARNING(ERROR_TYPE_MEMORY, -1,
+                            "Memory manager already initialized%s", "");
         return true;
     }
     
     // 分配内存管理器内存 / Allocate memory manager memory
     g_memory_manager = (MemoryManager*)malloc(sizeof(MemoryManager));
     if (g_memory_manager == NULL) {
-        ERROR_REPORT_FATAL(ERROR_TYPE_MEMORY, -1, 
-                          "Failed to allocate memory for memory manager");
+        ERROR_REPORT_FATAL(ERROR_TYPE_MEMORY, -1,
+                          "Failed to allocate memory for memory manager%s", "");
         return false;
     }
     
@@ -83,7 +83,7 @@ bool memory_manager_init(const MemoryConfig* config) {
     
     g_memory_manager->initialized = true;
     
-    ERROR_REPORT_INFO(ERROR_TYPE_MEMORY, 0, "Memory manager initialized successfully");
+    ERROR_REPORT_INFO(ERROR_TYPE_MEMORY, 0, "Memory manager initialized successfully%s", "");
     return true;
 }
 
@@ -203,13 +203,14 @@ void* memory_alloc_debug(size_t size, MemoryType type,
  * @brief 释放内存 / Free memory
  */
 void memory_free_debug(void* ptr, const char* file, int line, const char* function) {
+    (void)function; // 标记未使用参数
     if (ptr == NULL) {
         return; // 允许释放NULL指针 / Allow freeing NULL pointer
     }
     
     if (g_memory_manager == NULL || !g_memory_manager->initialized) {
-        ERROR_REPORT_WARNING(ERROR_TYPE_MEMORY, -1, 
-                            "Memory manager not initialized, using standard free");
+        ERROR_REPORT_WARNING(ERROR_TYPE_MEMORY, -1,
+                            "Memory manager not initialized, using standard free%s", "");
         free(ptr);
         return;
     }
@@ -527,6 +528,7 @@ static void* add_guard_bytes(void* ptr, size_t size) {
  * @brief 移除保护字节 / Remove guard bytes
  */
 static void* remove_guard_bytes(void* ptr, size_t* size) {
+    (void)size; // 标记未使用参数
     if (ptr == NULL) {
         return NULL;
     }

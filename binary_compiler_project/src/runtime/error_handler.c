@@ -59,8 +59,8 @@ static void default_error_handler(const ErrorInfo* error, void* user_data);
 bool error_system_init(int max_handlers, int max_history) {
     // 检查是否已经初始化 / Check if already initialized
     if (g_error_manager != NULL && g_error_manager->initialized) {
-        ERROR_REPORT_WARNING(ERROR_TYPE_SYSTEM, -1, 
-                            "Error system already initialized");
+        ERROR_REPORT_WARNING(ERROR_TYPE_SYSTEM, -1,
+                            "Error system already initialized%s", "");
         return true;
     }
     

@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <inttypes.h>
 
 // C类型映射表 / C Type Mapping Table
 static const char* c_type_names[] = {
@@ -203,7 +204,7 @@ bool codebuffer_append_line(CodeBuffer* buffer, const char* line) {
 SymbolTable* symboltable_create(SymbolTable* parent) {
     SymbolTable* table = (SymbolTable*)memory_alloc(sizeof(SymbolTable), MEM_TYPE_AST);
     if (!table) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate symbol table");
+        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate symbol table%s", "");
         return NULL;
     }
     
@@ -250,7 +251,7 @@ bool symboltable_add(SymbolTable* table, const char* name, DataType type, const 
     
     SymbolEntry* entry = (SymbolEntry*)memory_alloc(sizeof(SymbolEntry), MEM_TYPE_AST);
     if (!entry) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate symbol entry");
+        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate symbol entry%s", "");
         return false;
     }
     
@@ -307,7 +308,7 @@ SymbolEntry* symboltable_find(SymbolTable* table, const char* name) {
 CodeGenerator* codegen_create(const CodeGenConfig* config) {
     CodeGenerator* codegen = (CodeGenerator*)memory_alloc(sizeof(CodeGenerator), MEM_TYPE_CODE);
     if (!codegen) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate code generator");
+        ERROR_REPORT_ERROR(ERROR_TYPE_MEMORY, -1, "Failed to allocate code generator%s", "");
         return NULL;
     }
     
@@ -392,6 +393,8 @@ static bool is_boolean_operator(const char* name) {
     return is_comparison_operator(name) || is_logical_operator(name);
 }
 
+// 暂时未使用，但保留用于未来扩展 / Currently unused, but kept for future expansion
+__attribute__((unused))
 static bool is_control_structure(const char* name) {
     return (strcmp(name, "if") == 0 || strcmp(name, "when") == 0 ||
             strcmp(name, "unless") == 0 || strcmp(name, "while") == 0 ||
@@ -600,7 +603,7 @@ char* codegen_generate_expression(CodeGenerator* codegen, ASTNode* node) {
         case AST_NODE_INTEGER: {
             char* result = (char*)memory_alloc(32, MEM_TYPE_TEMP);
             if (result) {
-                snprintf(result, 32, "%lld", node->data.literal.int_value);
+                snprintf(result, 32, "%" PRId64, node->data.literal.int_value);
             }
             return result;
         }

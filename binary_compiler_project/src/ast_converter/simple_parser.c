@@ -254,7 +254,7 @@ static void lexer_skip_comment(Lexer* lexer) {
  */
 char* lexer_read_string(Lexer* lexer) {
     if (lexer->current_char != '"') {
-        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Expected '\"' at start of string");
+        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Expected '\"' at start of string%s", "");
         return NULL;
     }
     
@@ -1195,7 +1195,7 @@ BinaryOpType get_binary_operator_type(const char* name) {
  */
 ASTNode* parse_string(const char* input) {
     if (!input) {
-        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Input string cannot be NULL");
+        ERROR_REPORT_ERROR(ERROR_TYPE_PARSE, -1, "Input string cannot be NULL%s", "");
         return NULL;
     }
 
